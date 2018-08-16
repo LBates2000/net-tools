@@ -1,0 +1,50 @@
+{
+    "containerDefinitions": [{
+        "logConfiguration": {
+            "logDriver": "syslog",
+            "options": {
+                "tag": "lbates2000/net-tools/{{IMAGE_TAG}}/{{{.ID}}}"
+            }
+        },
+        "volumesFrom": [],
+        "hostname": "net-tools-{{BUILD_ENV}}",
+        "extraHosts": [{
+            "hostname": "net-tools-{{BUILD_ENV}}",
+            "ipAddress": "127.0.0.1"
+        }],
+        "memoryReservation": 128,
+        "memory": 2048,
+        "portMappings": [{
+            "hostPort": 0,
+            "containerPort": 4200,
+            "protocol": "tcp"
+        }, {
+            "hostPort": 0,
+            "containerPort": 5000,
+            "protocol": "tcp"
+        }],
+        "essential": true,
+        "mountPoints": [],
+        "name": "net-tools",
+        "environment": [{
+            "name": "SERVICE_4200_NAME",
+            "value": "shellinabox"
+        }, {
+            "name": "SERVICE_4200_TAGS",
+            "value": "internal,infospace"
+        }, {
+            "name": "SERVICE_5000_NAME",
+            "value": "net-tools"
+        }, {
+            "name": "SERVICE_5000_TAGS",
+            "value": "internal,infospace"
+        }, {
+            "name": "BUILD_ENV",
+            "value": "{{BUILD_ENV}}"
+        }],
+        "image": "lbates2000/net-tools:{{IMAGE_TAG}}",
+        "cpu": 24
+    }],
+    "volumes": [],
+    "family": "net-tools-{{IMAGE_TAG}}"
+}

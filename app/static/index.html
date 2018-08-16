@@ -1,0 +1,93 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://www.w3.org/StyleSheets/Core/Steely" type="text/css">
+    <title>CloudOps Net-Tools</title>
+</head>
+
+<body>
+    <H2>Welcome to the CloudOps Net-Tools page.</H2>
+    <form name="commandsForm" action="/shellcommand" method="GET">
+        <br>Available commands:
+        <br>
+        <br>
+        <input type="radio" id="command" name="command" value="curl" enabled="true">curl
+        <br>
+        <input type="radio" id="command" name="command" value="dig">dig
+        <br>
+        <input type="radio" id="command" name="command" value="mtr">mtr
+        <br>
+        <input type="radio" id="command" name="command" value="nslookup">nslookup
+        <br>
+        <input type="radio" id="command" name="command" value="phantomjs">phantomjs
+        <br>
+        <input type="radio" id="command" name="command" value="ping">ping
+        <br>
+        <input type="radio" id="command" name="command" value="traceroute">traceroute
+        <br>
+        <br>Parameters:
+        <br>
+        <input type="text" id="parameters" name="parameters" value="">
+        <br>
+        <br>
+        <input type="submit" id="submit" value="Run">
+    </form>
+    </br>
+    Available network tools:
+    <br>
+    <p>
+        <br><b>CURL</b> is a tool to transfer data from or to a server, using one of the supported protocols (DICT, FILE, FTP, FTPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3, POP3S, RTMP, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET and TFTP). The command is designed to work without user interaction.
+        <br>
+        <br>Example: curl -L dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/en/man1/curl.1.html>curl man page</a></p>
+    <p>
+        <br><b>DIG</b> utility sends one or more DNS queries to a nameserver. Each query can have individual settings, or it can be specified globally via common-settings, which must precede query specification.
+        <br>
+        <br>Example: dig dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/en/man1/curl.1.html>dig man page</a></p>
+    <p>
+        <br><b>MTR</b> combines the functionality of the traceroute and ping programs in a single network diagnostic tool.
+        <br>
+        <br> Example: mtr -rw dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/en/man8/mtr.8.html>mtr man page</a></p>
+    <p>
+        <br><b>NSLOOKUP</b> is a program to query Internet domain name servers. Nslookup has two modes: interactive and non-interactive. Interactive mode allows the user to query name servers for information about various hosts and domains or to print a list of hosts in a domain. Non-interactive mode is used to print just the name and requested information for a host or domain.
+        <br>
+        <br>Example: nslookup dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/en/man1/nslookup.1.html>nslookup man page</a></p>
+    <p>
+        <br><b>PHANTOMJS</b> is a headless WebKit scriptable with a JavaScript API.
+        <br>
+        <br>The net-tools page launches a JavaScript (screenshot.js) that takes a screenshot of a webpage and returns it as a timestamped png.
+        <br>
+        <br>Example: phantomjs http://www.dogpile.com/search/web?fcoid=417&fcop=topnav&fpid=27&q=cats&ql=
+        <br>
+        <br> <a href=http://manpages.ubuntu.com/manpages/xenial/en/man1/phantomjs.1.html>phantomjs man page</a></p>
+    <p>
+        <br><b>PING</b> uses the ICMP protocol's mandatory ECHO_REQUEST datagram to elicit an ICMP ECHO_RESPONSE from a host or gateway. ECHO_REQUEST datagrams ('pings') have an IP and ICMP header, followed by a “struct timeval” and then an arbitrary number of 'pad' bytes used to fill out the packet.
+        <br>
+        <br>Example: ping -c 3 dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/en/man1/ping.1.html>ping man page</a></p>
+    <p>
+        <br>
+        <b>TRACEROUTE</b> tracks the route packets taken from an IP network on their way to a given host. It utilizes the IP protocol's time to live (TTL) field and attempts to elicit an ICMP TIME_EXCEEDED response from each gateway along the path to the host.
+        <br>
+        <br>Example: traceroute dogpile.com
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/man1/traceroute.db.1.html>traceroute man page</a></p>
+    <p>
+        <br> Additional tools:
+        <br>
+        <br><b>Shell In A Box</b> (shellinabox) is a web based terminal emulator.
+        <br>
+        <br>Click <a href=/shellinabox>here</a> to be redirected to shellinabox.
+        <br>
+        <br><a href=http://manpages.ubuntu.com/manpages/xenial/man1/shellinaboxd.1.html>shellinaboxd man page</a></p>
+</body>
+
+</html>
