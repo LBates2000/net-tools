@@ -1,5 +1,5 @@
 FROM ubuntu:16.04
-MAINTAINER Lawrence Bates <Lawrence.Bates@infospace.com>
+MAINTAINER Lawrence Bates <Lawrence.Bates@gmail.com>
 
 RUN mkdir -p /opt/infospace/net-tools/app/static/screenshot && \
 chmod -R 770 /opt/infospace/net-tools/app/static/screenshot && \
