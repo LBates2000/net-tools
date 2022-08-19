@@ -29,7 +29,7 @@ def root():
 @app.route('/shellinabox')
 def shellinabox():
     # Use shellinabox server for this environment
-    shellinabox_server = 'http://shellinabox.microverse.' + os.environ['BUILD_ENV'] + '.inspcloud.com/'
+    shellinabox_server = 'http://shellinabox.microverse.' + os.environ['BUILD_ENV'] + '.systems.com/'
     return redirect(shellinabox_server)
 
 @parser.error_handler
