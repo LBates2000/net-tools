@@ -31,13 +31,13 @@
             "value": "shellinabox"
         }, {
             "name": "SERVICE_4200_TAGS",
-            "value": "internal,infospace"
+            "value": "internal,microverse"
         }, {
             "name": "SERVICE_5000_NAME",
             "value": "net-tools"
         }, {
             "name": "SERVICE_5000_TAGS",
-            "value": "internal,infospace"
+            "value": "internal,microverse"
         }, {
             "name": "BUILD_ENV",
             "value": "{{BUILD_ENV}}"

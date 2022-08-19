@@ -29,7 +29,7 @@ def root():
 @app.route('/shellinabox')
 def shellinabox():
     # Use shellinabox server for this environment
-    shellinabox_server = 'http://shellinabox.infospace.' + os.environ['BUILD_ENV'] + '.inspcloud.com/'
+    shellinabox_server = 'http://shellinabox.microverse.' + os.environ['BUILD_ENV'] + '.inspcloud.com/'
     return redirect(shellinabox_server)
 
 @parser.error_handler
@@ -57,14 +57,14 @@ class ShellCommand(Resource):
 
         if command == 'phantomjs':
             timestamp = datetime.today().strftime('%Y%m%d%H%M%S')
-            screenshot_path = '/opt/infospace/net-tools/app/static/screenshot/'
+            screenshot_path = '/opt/microverse/net-tools/app/static/screenshot/'
             screenshot_name = 'screenshot_' + timestamp + '.png'
             screenshot = screenshot_path + screenshot_name
             old_screenshot = glob.glob(screenshot_path + 'screenshot*.png')
             if old_screenshot:
                 if os.path.isfile(old_screenshot[0]):
                     os.remove(old_screenshot[0])
-            command_line = 'phantomjs --ignore-ssl-errors=true --ssl-protocol=any /opt/infospace/net-tools/app/screenshot.js ' + parameters +  ' ' + screenshot
+            command_line = 'phantomjs --ignore-ssl-errors=true --ssl-protocol=any /opt/microverse/net-tools/app/screenshot.js ' + parameters +  ' ' + screenshot
             process_args = shlex.split(command_line)
             output = subprocess.check_output(process_args, shell=False, stderr=subprocess.STDOUT)
             resp = send_from_directory(screenshot_path, screenshot_name, as_attachment=True, mimetype='application/octet-stream')
