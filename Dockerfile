@@ -1,12 +1,12 @@
 FROM ubuntu:16.04
 MAINTAINER Lawrence Bates <Lawrence.Bates@gmail.com>
 
-RUN mkdir -p /opt/infospace/net-tools/app/static/screenshot && \
-chmod -R 770 /opt/infospace/net-tools/app/static/screenshot && \
-mkdir /opt/infospace/net-tools/files && \
-chmod 770 /opt/infospace/net-tools/files
+RUN mkdir -p /opt/microverse/net-tools/app/static/screenshot && \
+chmod -R 770 /opt/microverse/net-tools/app/static/screenshot && \
+mkdir /opt/microverse/net-tools/files && \
+chmod 770 /opt/microverse/net-tools/files
 
-ENV APP_DIR=/opt/infospace/net-tools
+ENV APP_DIR=/opt/microverse/net-tools
 COPY app $APP_DIR/app
 COPY files $APP_DIR/files
 RUN chmod +x $APP_DIR/files/setpass.sh
